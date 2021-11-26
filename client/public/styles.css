@@ -1,0 +1,10 @@
+.app-logo {
+    position: relative;
+    right: 2rem;
+}
+
+@media (max-width: 991.5px) {
+    .app-logo {
+        right: 0;
+    }
+}

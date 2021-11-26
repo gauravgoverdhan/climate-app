@@ -1,0 +1,24 @@
+.container.p-3 {
+    margin-top: 30px;
+    width: 70%;
+}
+
+/* .curr-status {
+    display: inline;
+}
+
+img {
+    display: block;
+} */
+
+.curr-weather-col-2 {
+    text-align: center;
+}
+
+.curr-weather-col-2 img {
+    margin: auto;
+}
+
+h3 {
+    font-size: 1.4rem;
+}

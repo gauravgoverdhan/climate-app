@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+#weather-logo {
+    width: 22%;
+    margin: 40px auto;
+}
+
+.app-heading {
+    margin: 70px auto;
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: rgb(0, 29, 110);
+    font-size: 3rem;
+}
+
+.container-fluid h3 {
+    margin: 40px
+}

@@ -1,0 +1,11 @@
+.container.p-5 {
+    width: 40%;
+}
+
+.container.p-5 form {
+    background-color: rgba(0, 31, 88, 0.808);
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
