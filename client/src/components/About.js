@@ -1,14 +1,74 @@
 import React from "react";
 import Header from "./Header";
-import "../assets/HomePage.css"
+import "../assets/HomePage.css";
 
 export default function About(props) {
-    return (
-        <div className="About">
-            <Header about={true} />
-            <div className="container-fluid">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+  return (
+    <div className="Features">
+      <Header features={true} />
+      <div className="containerFluid">
+        <div className="container mt-5">
+          <div className="row" style={{ marginBottom: 90 }}>
+            <div className="col-4">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://imgur.com/Gkh9btm.png"
+                  alt="Image1"
+                ></img>
+                <div class="card-body">
+                  <h5 class="card-title">Rishav Naskar</h5>
+                  <p class="card-text">Registration Number - 19BCE2324</p>
+                  <a
+                    href="https://www.linkedin.com/in/rishav-naskar-9621101a6/"
+                    class="btn btn-primary"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+              </div>
             </div>
+            <div className="col-4">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://imgur.com/2yPCNBy.png"
+                  alt="Image1"
+                ></img>
+                <div class="card-body">
+                  <h5 class="card-title">Gaurav Goverdhan</h5>
+                  <p class="card-text">Registration Number - 19BCE2685</p>
+                  <a
+                    href="https://www.linkedin.com/in/gauravgoverdhan/"
+                    class="btn btn-primary"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-4">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://imgur.com/6AYRc93.png"
+                  alt="Image1"
+                ></img>
+                <div class="card-body">
+                  <h5 class="card-title">Lakshmi Priya</h5>
+                  <p class="card-text">Registration Number - 19BCI0203</p>
+                  <a
+                    href="https://www.linkedin.com/in/"
+                    class="btn btn-primary"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
