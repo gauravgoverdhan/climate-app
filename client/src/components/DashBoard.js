@@ -3,6 +3,7 @@ import Header from "./Header";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import "../assets/DashBoard.css";
+import Graph from "./Graph";
 
 export default function DashBoard(props) {
     const location = useLocation({});
@@ -14,6 +15,7 @@ export default function DashBoard(props) {
             setWeatherRes(res.data);
             // console.log(weatherRes);
             // console.log(res.data.current.weather[0].icon);
+            // console.log(weatherRes.daily);
             setWeatherImg("http://openweathermap.org/img/wn/" + res.data.current.weather[0].icon + "@2x.png")
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,6 +28,8 @@ export default function DashBoard(props) {
     if (!weatherRes.current.temp)
         return null;
     if (!weatherImg) 
+        return null;
+    if (!weatherRes.daily)
         return null;
 
     return (
@@ -46,6 +50,21 @@ export default function DashBoard(props) {
                     </div>
                 </div>
             </div>
+            {location.state.isLogged &&
+                <div className="container p-3 bg-light rounded-3">
+                    <Graph daily={weatherRes.daily} type="temp" />
+                </div>
+            }
+            {location.state.isLogged &&
+                <div className="container p-3 bg-light rounded-3">
+                    <Graph daily={weatherRes.daily} type="precipitation" />
+                </div>
+            }
+            {location.state.isLogged &&
+                <div className="container p-3 bg-light rounded-3">
+                    <Graph daily={weatherRes.daily} type="humidity" />
+                </div>
+            }
         </div>
     );
 }
