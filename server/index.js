@@ -101,13 +101,15 @@ app.post("/login", (req, res) => {
 app.get("/dashboard", async (req, res) => {
     const city = req.query.city;
     // const country = req.query.country;
-    // const geolocRes = await axios.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + city + ",+" + country + "&key=" + process.env.GOOGLE_API_KEY);
     const geolocRes = await axios.get("https://geocode.xyz/" + city + "?json=1&auth=" + process.env.GEOCODE_AUTH_KEY);
-    // console.log(geolocRes.data);
-    const { latt, longt, standard: { countryname: country } } = geolocRes.data;
+    // const geolocRes = await axios.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + city+ "&key=" + process.env.GOOGLE_AUTH_KEY);
+    console.log(geolocRes.data);
+    const { latt, longt } = geolocRes.data;
+    // const { lat, lng } = geolocRes.data.results.geometry.location;
     const weatherRes = await axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=" + latt + "&lon=" + longt + "&units=metric&appid=" + process.env.OPEN_WEATHER_API_KEY);
-    console.log(weatherRes.data);
+    console.log(weatherRes.data.daily);
     console.log(latt + " " + longt);
+    // console.log(lat + " " + lng);
     res.json(weatherRes.data);
 }); 
 
